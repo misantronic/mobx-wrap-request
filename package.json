@@ -1,0 +1,26 @@
+{
+  "name": "mobx-wrap-request",
+  "version": "1.0.0",
+  "description": "a request-wrapper for async operations powered by mobx",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/misantronic/mobx-wrap-request.git"
+  },
+  "keywords": [
+    "mobx"
+  ],
+  "author": "David Schkalee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/misantronic/mobx-wrap-request/issues"
+  },
+  "homepage": "https://github.com/misantronic/mobx-wrap-request#readme",
+  "dependencies": {
+    "mobx": "^5.11.0",
+    "wrap-request": "^2.6.0"
+  }
+}
