@@ -23,6 +23,6 @@
         "mobx": ">= 4.x"
     },
     "dependencies": {
-        "wrap-request": "^3.0.0"
+        "wrap-request": ">= 3.0.0"
     }
 }
