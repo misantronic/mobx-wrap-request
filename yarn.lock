@@ -3,6 +3,6 @@
 
 
 "wrap-request@>= 3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/wrap-request/-/wrap-request-3.0.0.tgz#0f64c9320e6dcc5ed59d51c119dd4dbbe6677afd"
-  integrity sha512-yCIteDbP2XbN3PLZ4yjwoYKvVAs4jqfmC7IQZns1Bdwd0rSsYQ/WAYQnwpptjrkmgB9UU7BiUXfHWWZqzqrCBw==
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/wrap-request/-/wrap-request-3.1.0.tgz#c6c761070639d6fb262371558743d55427f7eba9"
+  integrity sha512-WhVaHAmVj2FpoupXIyzD8OGSJHR0SGJsgR2cWhlBEJMI8FZtqPnPU9KDrDqPQrehAPjYi8SHh8qAGwgWs8K11A==
