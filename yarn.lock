@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"wrap-request@>= 3.0.0":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/wrap-request/-/wrap-request-3.1.0.tgz#c6c761070639d6fb262371558743d55427f7eba9"
-  integrity sha512-WhVaHAmVj2FpoupXIyzD8OGSJHR0SGJsgR2cWhlBEJMI8FZtqPnPU9KDrDqPQrehAPjYi8SHh8qAGwgWs8K11A==
+"wrap-request@>= 3.1.1":
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/wrap-request/-/wrap-request-3.1.1.tgz#644bb939f5e4334a4260fa2a29b17a50fb901752"
+  integrity sha512-Eg2kb5j2moCZMxI8ag7QOokf6lSwEU3BX0pyig9Rb9FdHa8OA8Ndb7QYr3xeKK1DSnCBjpHhim2A5Y7S/apr9A==
