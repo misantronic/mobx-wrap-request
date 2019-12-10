@@ -1,16 +1,18 @@
-import { computed, decorate, observable } from 'mobx';
-import { WrapRequest } from 'wrap-request';
+import { computed, decorate, observable } from "mobx";
+import { WrapRequest } from "wrap-request";
 
-export * from 'wrap-request';
+export * from "wrap-request";
 
 decorate(WrapRequest, {
-    _$: observable,
-    $: computed,
-    error: observable,
-    transform: observable,
-    state: observable,
-    source: computed,
-    loading: computed,
-    fetched: computed,
-    empty: computed
+  _$: observable,
+  $: computed,
+  _metadata: observable,
+  metadata: computed,
+  error: observable,
+  transform: observable,
+  state: observable,
+  source: computed,
+  loading: computed,
+  fetched: computed,
+  empty: computed
 });
