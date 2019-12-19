@@ -1,6 +1,6 @@
 {
   "name": "mobx-wrap-request",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "a request-wrapper for async operations powered by mobx",
   "main": "index.js",
   "scripts": {
@@ -20,9 +20,7 @@
   },
   "homepage": "https://github.com/misantronic/mobx-wrap-request#readme",
   "peerDependencies": {
-    "mobx": ">= 4.x"
-  },
-  "dependencies": {
-    "wrap-request": ">= 3.0.0"
+    "mobx": ">= 4.x",
+    "wrap-request": ">= 3.2.3"
   }
 }
