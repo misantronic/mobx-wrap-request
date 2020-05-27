@@ -7,6 +7,7 @@ decorate(WrapRequest, {
   _$: observable,
   $: computed,
   _metadata: observable,
+  requestParams: observable,
   metadata: computed,
   error: observable,
   transform: observable,
