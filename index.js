@@ -1,9 +1,9 @@
-import { computed, decorate, observable } from "mobx";
+import { computed, makeObservable, observable } from "mobx";
 import { WrapRequest } from "wrap-request";
 
 export * from "wrap-request";
 
-decorate(WrapRequest, {
+makeObservable(WrapRequest, {
   _$: observable,
   $: computed,
   _metadata: observable,
