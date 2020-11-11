@@ -1,19 +1,17 @@
-import { computed, makeObservable, observable } from "mobx";
-import { WrapRequest } from "wrap-request";
+import { action, makeAutoObservable } from "mobx";
+import { wrapRequest } from "wrap-request";
 
 export * from "wrap-request";
 
-makeObservable(WrapRequest, {
-  _$: observable,
-  $: computed,
-  _metadata: observable,
-  requestParams: observable,
-  metadata: computed,
-  error: observable,
-  transform: observable,
-  state: observable,
-  source: computed,
-  loading: computed,
-  fetched: computed,
-  empty: computed
-});
+const originalWrapRequest = wrapRequest;
+
+wrapRequest = function (...args) {
+  const res = originalWrapRequest(...args);
+
+  makeAutoObservable(res, {
+    reset: action,
+    request: action
+  });
+
+  return res;
+};
