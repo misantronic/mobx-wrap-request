@@ -1,11 +1,11 @@
 import { action, makeAutoObservable } from "mobx";
-import { wrapRequest } from "wrap-request";
+import * as pkg from "wrap-request";
 
 export * from "wrap-request";
 
-const originalWrapRequest = wrapRequest;
+const originalWrapRequest = pkg.wrapRequest;
 
-wrapRequest = function (...args) {
+pkg.wrapRequest = function (...args) {
   const res = originalWrapRequest(...args);
 
   makeAutoObservable(res, {
