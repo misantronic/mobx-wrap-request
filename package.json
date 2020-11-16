@@ -1,6 +1,6 @@
 {
   "name": "mobx-wrap-request",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "a request-wrapper for async operations powered by mobx",
   "main": "index.js",
   "scripts": {
