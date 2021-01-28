@@ -24,7 +24,7 @@
     "wrap-request": ">= 3.2.3"
   },
   "devDependencies": {
-    "mobx": "^6.0.3",
+    "mobx": "^6.1.1",
     "tslib": "^2.0.3",
     "typescript": "^4.1.2",
     "wrap-request": "^4.0.0"
