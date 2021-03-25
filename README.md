@@ -12,4 +12,5 @@ import 'mobx-wrap-request'
 ## versions
 
 for mobx 6.x please use mobx-wrap-request@2.x
+
 for mobx < 6 please use mobx-wrap-request@1.x (discontinued)
