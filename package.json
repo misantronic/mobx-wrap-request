@@ -26,7 +26,7 @@
   "devDependencies": {
     "mobx": "^6.1.8",
     "tslib": "^2.0.3",
-    "typescript": "^4.1.2",
+    "typescript": "^4.3.4",
     "wrap-request": "^5.1.3"
   }
 }
