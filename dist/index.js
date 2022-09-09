@@ -6,7 +6,7 @@ const pkg = require("wrap-request");
 const originalWrapRequest = pkg.wrapRequest;
 function buildNewWrapRequest(overrides, ...args) {
     const res = originalWrapRequest(...args);
-    mobx_1.makeAutoObservable(res, overrides);
+    (0, mobx_1.makeAutoObservable)(res, overrides);
     return res;
 }
 function newWrapRequest(...args) {

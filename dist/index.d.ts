@@ -1,15 +1,9 @@
 import { AnnotationsMap } from 'mobx';
 import * as pkg from 'wrap-request';
 declare const originalWrapRequest: typeof pkg.wrapRequest;
-declare type NoInfer<T> = [T][T extends any ? 0 : never];
-declare type WrapRequestParams = Parameters<typeof originalWrapRequest>;
-declare type RequestFn = WrapRequestParams[0];
-declare type RequestOptions = Parameters<RequestFn>[1];
-declare type Options = WrapRequestParams[1];
-export { RequestFn, Options, RequestOptions };
-declare function buildNewWrapRequest(overrides: AnnotationsMap<pkg.WrapRequest, NoInfer<PropertyKey>>, ...args: WrapRequestParams): pkg.WrapRequest<unknown, unknown, unknown, unknown>;
-declare function newWrapRequest(...args: WrapRequestParams): ReturnType<typeof buildNewWrapRequest>;
+declare type WrapRequestParams<$, P = any, $$ = $, MD = any> = Parameters<typeof originalWrapRequest<$, P, $$, MD>>;
+declare function newWrapRequest<$, P = any, $$ = $, MD = any>(...args: WrapRequestParams<$, P, $$, MD>): pkg.WrapRequest<$, P, $$, MD>;
 declare namespace newWrapRequest {
-    var withObservableOverrides: (overrides: AnnotationsMap<pkg.WrapRequest<any, any, any, any>, string | number | symbol>) => (request: pkg.RequestFn<unknown, unknown>, options?: pkg.Options<unknown, unknown, unknown> | undefined) => pkg.WrapRequest<unknown, unknown, unknown, unknown>;
+    var withObservableOverrides: (overrides: AnnotationsMap<pkg.WrapRequest<any, any, any, any>, PropertyKey>) => <$, P = any, $$ = $, MD = any>(request: pkg.RequestFn<$, P>, options?: pkg.Options<$, $$, MD> | undefined) => pkg.WrapRequest<$, P, $$, MD>;
 }
 export { newWrapRequest as wrapRequest };

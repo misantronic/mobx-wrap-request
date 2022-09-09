@@ -5,28 +5,25 @@ const originalWrapRequest = pkg.wrapRequest;
 
 type NoInfer<T> = [T][T extends any ? 0 : never];
 
-type WrapRequestParams = Parameters<typeof originalWrapRequest>;
-type RequestFn = WrapRequestParams[0];
-type RequestOptions = Parameters<RequestFn>[1];
-type Options = WrapRequestParams[1];
+type WrapRequestParams<$, P = any, $$ = $, MD = any> = Parameters<
+    typeof originalWrapRequest<$, P, $$, MD>
+>;
 
-export { RequestFn, Options, RequestOptions };
-
-function buildNewWrapRequest(
+function buildNewWrapRequest<$, P = any, $$ = $, MD = any>(
     overrides: AnnotationsMap<pkg.WrapRequest, NoInfer<PropertyKey>>,
-    ...args: WrapRequestParams
+    ...args: WrapRequestParams<$, P, $$, MD>
 ) {
-    const res = originalWrapRequest(...args);
+    const res = originalWrapRequest<$, P, $$, MD>(...args);
 
     makeAutoObservable(res, overrides);
 
     return res;
 }
 
-function newWrapRequest(
-    ...args: WrapRequestParams
-): ReturnType<typeof buildNewWrapRequest> {
-    return buildNewWrapRequest(
+function newWrapRequest<$, P = any, $$ = $, MD = any>(
+    ...args: WrapRequestParams<$, P, $$, MD>
+) {
+    return buildNewWrapRequest<$, P, $$, MD>(
         {
             reset: action,
             request: action,
@@ -38,8 +35,10 @@ function newWrapRequest(
 function withObservableOverrides(
     overrides: AnnotationsMap<pkg.WrapRequest, NoInfer<PropertyKey>>
 ) {
-    return (...args: WrapRequestParams) => {
-        return buildNewWrapRequest(overrides, ...args);
+    return <$, P = any, $$ = $, MD = any>(
+        ...args: WrapRequestParams<$, P, $$, MD>
+    ) => {
+        return buildNewWrapRequest<$, P, $$, MD>(overrides, ...args);
     };
 }
 
