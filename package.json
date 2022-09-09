@@ -1,32 +1,36 @@
 {
-  "name": "mobx-wrap-request",
-  "version": "2.1.0",
-  "description": "a request-wrapper for async operations powered by mobx",
-  "main": "dist/index.js",
-  "scripts": {
-    "start": "tsc -p ."
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/misantronic/mobx-wrap-request.git"
-  },
-  "keywords": [
-    "mobx"
-  ],
-  "author": "David Schkalee",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/misantronic/mobx-wrap-request/issues"
-  },
-  "homepage": "https://github.com/misantronic/mobx-wrap-request#readme",
-  "peerDependencies": {
-    "mobx": ">= 6.x",
-    "wrap-request": ">= 3.2.3"
-  },
-  "devDependencies": {
-    "mobx": "^6.1.8",
-    "tslib": "^2.0.3",
-    "typescript": "^4.1.2",
-    "wrap-request": "^5.1.3"
-  }
+    "name": "mobx-wrap-request",
+    "version": "2.1.0",
+    "description": "a request-wrapper for async operations powered by mobx",
+    "main": "dist/index.js",
+    "scripts": {
+        "start": "tsc -p ."
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/misantronic/mobx-wrap-request.git"
+    },
+    "keywords": [
+        "mobx"
+    ],
+    "author": "David Schkalee",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/misantronic/mobx-wrap-request/issues"
+    },
+    "homepage": "https://github.com/misantronic/mobx-wrap-request#readme",
+    "peerDependencies": {
+        "mobx": ">= 6.x",
+        "wrap-request": ">= 6.x.x"
+    },
+    "devDependencies": {
+        "mobx": "^6.1.8",
+        "tslib": "^2.0.3",
+        "typescript": "^4.1.2",
+        "wrap-request": "^6.0.2"
+    },
+    "prettier": {
+        "tabWidth": 4,
+        "singleQuote": true
+    }
 }
