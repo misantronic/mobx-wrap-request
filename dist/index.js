@@ -22,5 +22,6 @@ function withObservableOverrides(overrides) {
     };
 }
 newWrapRequest.withObservableOverrides = withObservableOverrides;
+newWrapRequest.stream = pkg.wrapRequest.stream;
 pkg.wrapRequest = newWrapRequest;
 //# sourceMappingURL=index.js.map

@@ -5,5 +5,6 @@ declare type WrapRequestParams<$, P = any, $$ = $, MD = any> = Parameters<typeof
 declare function newWrapRequest<$, P = any, $$ = $, MD = any>(...args: WrapRequestParams<$, P, $$, MD>): pkg.WrapRequest<$, P, $$, MD>;
 declare namespace newWrapRequest {
     var withObservableOverrides: (overrides: AnnotationsMap<pkg.WrapRequest<any, any, any, any>, PropertyKey>) => <$, P = any, $$ = $, MD = any>(request: pkg.RequestFn<$, P>, options?: pkg.Options<$, MD> | undefined) => pkg.WrapRequest<$, P, $$, MD>;
+    var stream: <$, P extends unknown = undefined>(request: (update: ($: $) => void, resolve: ($: $) => void, params: P) => void | Promise<void>) => pkg.WrapRequest<$, P, $, any>;
 }
 export { newWrapRequest as wrapRequest };
