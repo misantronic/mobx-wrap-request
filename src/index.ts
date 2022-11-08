@@ -43,6 +43,7 @@ function withObservableOverrides(
 }
 
 newWrapRequest.withObservableOverrides = withObservableOverrides;
+newWrapRequest.stream = pkg.wrapRequest.stream;
 
 (pkg as any).wrapRequest = newWrapRequest;
 

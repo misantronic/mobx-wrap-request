@@ -27,7 +27,7 @@
         "mobx": "^6.6.2",
         "tslib": "^2.4.0",
         "typescript": "^4.8.0",
-        "wrap-request": "^6.0.5"
+        "wrap-request": "^6.2.1"
     },
     "prettier": {
         "tabWidth": 4,
