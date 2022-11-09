@@ -21,7 +21,7 @@
     "homepage": "https://github.com/misantronic/mobx-wrap-request#readme",
     "peerDependencies": {
         "mobx": ">= 6.x",
-        "wrap-request": ">= 6.x.x"
+        "wrap-request": ">= 6.2.2"
     },
     "devDependencies": {
         "mobx": "^6.6.2",
